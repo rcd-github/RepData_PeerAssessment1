@@ -34,8 +34,8 @@ The first chart presents a histogram with the total number of steps taken per da
 
 <img src="PA1_template_files/figure-html/Code Question 1-1.png" title="" alt="" style="display: block; margin: auto;" />
   
-Note that the mean and the median overlap in the plot, as their values are almost the same: **the median total number of daily steps is 10765** and **the mean total number of daily steps is 10766.2.**
-
+Note that the mean and the median overlap in the plot, as their values are almost the same: **the median total number of daily steps is 10765** and **the mean total number of daily steps is 10766.2.** The code generating these results (embedded in the .Rmd file) is: `median(tot.daily.steps$V1)` and ` as.character(round(mean(tot.daily.steps$V1), digits=1))`, respectively.
+  
 The code used to calculate the mean number of steps per day and to subsequently elaborate the histogram is the following:
 
 
@@ -60,7 +60,7 @@ legend("topright", legend=c("Kernel Density", "median",  "mean"), col=c("black",
 The second chart presents a time series plot of the 5-minute intervals during the 24-hour day in the x-axis and the average number of steps taken, averaged across all days in the y-axis. 
 <img src="PA1_template_files/figure-html/Code Question 2-1.png" title="" alt="" style="display: block; margin: auto;" />
   
-As shown in the chart above, **the 5-minute interval which on average across all the days in the dataset, contains the maximum mean number of steps is 08:35**, and the mean number of steps value registered at this time is 206.2. 
+As shown in the chart above, **the 5-minute interval which on average across all the days in the dataset, contains the maximum mean number of steps is 08:35**, and the mean number of steps value registered at this time is 206.2. The code generating these results (embedded in the .Rmd file) is: `format(index(int[int==max(int)]), "%H:%M")` and `round(largest[[1]], digits=1)`, respectively.
   
 The code used to generate the previous chart and associated calculations is the following: 
 

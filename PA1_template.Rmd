@@ -51,8 +51,8 @@ abline(v=mean(tot.daily.steps$V1), col="royalblue", lwd=2, lty=5)
 legend("topright", legend=c("Kernel Density", "median",  "mean"), col=c("black", "lawngreen", "royalblue"), lwd=c(2,2,2), lty=c(1,5,1), bty="n", cex = 0.7)
 ```
   
-Note that the mean and the median overlap in the plot, as their values are almost the same: **the median total number of daily steps is `r median(tot.daily.steps$V1)`** and **the mean total number of daily steps is `r as.character(round(mean(tot.daily.steps$V1), digits=1))`.**
-
+Note that the mean and the median overlap in the plot, as their values are almost the same: **the median total number of daily steps is `r median(tot.daily.steps$V1)`** and **the mean total number of daily steps is `r as.character(round(mean(tot.daily.steps$V1), digits=1))`.** The code generating these results (embedded in the .Rmd file) is: `median(tot.daily.steps$V1)` and ` as.character(round(mean(tot.daily.steps$V1), digits=1))`, respectively.
+  
 The code used to calculate the mean number of steps per day and to subsequently elaborate the histogram is the following:
 
 
@@ -81,7 +81,7 @@ axis(1, at=x, labels=format(x, "%H:%M"), cex.axis=0.7)
 text(index(int[int==max(int)]), largest, paste0(paste0("Max: ", round(largest[[1]], digits=1)), paste0(", at ", format(index(int[int==max(int)]), "%H:%M"))),pos=4, cex=0.8)
 ```
   
-As shown in the chart above, **the 5-minute interval which on average across all the days in the dataset, contains the maximum mean number of steps is `r  format(index(int[int==max(int)]), "%H:%M")`**, and the mean number of steps value registered at this time is `r round(largest[[1]], digits=1)`. 
+As shown in the chart above, **the 5-minute interval which on average across all the days in the dataset, contains the maximum mean number of steps is `r  format(index(int[int==max(int)]), "%H:%M")`**, and the mean number of steps value registered at this time is `r round(largest[[1]], digits=1)`. The code generating these results (embedded in the .Rmd file) is: `format(index(int[int==max(int)]), "%H:%M")` and `round(largest[[1]], digits=1)`, respectively.
   
 The code used to generate the previous chart and associated calculations is the following: 
 
